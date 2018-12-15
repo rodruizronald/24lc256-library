@@ -42,7 +42,8 @@ static void EEPROM_send_address(uint16_t address);
 //! @return None.
 //
 //*****************************************************************************
-void EEPROM_init(void)
+void
+EEPROM_init(void)
 {
   _set_bit(HOLD_DDR, EEPROM_HOLD);
   _set_bit(HOLD_PORT, EEPROM_HOLD);
@@ -66,7 +67,8 @@ void EEPROM_init(void)
 //! @return None.
 //
 //*****************************************************************************
-void EEPROM_write_byte(uint16_t address, uint8_t data)
+void
+EEPROM_write_byte(uint16_t address, uint8_t data)
 {
   //
   //  Enable writing operations.
@@ -102,7 +104,8 @@ void EEPROM_write_byte(uint16_t address, uint8_t data)
 //! @return response Data byte read from the memeory location.
 //
 //*****************************************************************************
-uint8_t EEPROM_read_byte(uint16_t address)
+uint8_t
+EEPROM_read_byte(uint16_t address)
 {
   SLAVE_SELECT;
   delay(10);
@@ -125,7 +128,8 @@ uint8_t EEPROM_read_byte(uint16_t address)
 //! @return None.
 //
 //*****************************************************************************
-static void EEPROM_write_enable(void)
+static void
+EEPROM_write_enable(void)
 {
   SLAVE_SELECT;
   delay(10);
@@ -144,7 +148,8 @@ static void EEPROM_write_enable(void)
 //! @return status Response from the status register.
 //
 //*****************************************************************************
-static uint8_t EEPROM_read_status(void)
+static uint8_t
+EEPROM_read_status(void)
 {
   SLAVE_SELECT;
   delay(10);
@@ -170,7 +175,8 @@ static uint8_t EEPROM_read_status(void)
 //! @return None.
 //
 //*****************************************************************************
-static void EEPROM_send_address(uint16_t address)
+static void
+EEPROM_send_address(uint16_t address)
 {
   //
   //  Most significant byte.

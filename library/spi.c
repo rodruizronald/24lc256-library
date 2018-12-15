@@ -31,7 +31,8 @@
 //! @return None.
 //
 //*****************************************************************************
-void SPI_init(void)
+void
+SPI_init(void)
 {
   //
   //  SPI Interface.
@@ -64,7 +65,8 @@ void SPI_init(void)
 //! @return None.
 //
 //*****************************************************************************
-uint8_t SPI_transfer(uint8_t data)
+uint8_t
+SPI_transfer(uint8_t data)
 {
   //
   //  Start transmission.
